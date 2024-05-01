@@ -7,7 +7,7 @@ if number < 0:
     last = last * -1
 
 str1 = f"Last digit of {number} is {last} "
-if last <= 5 & last != 0:
+if last <= 5 and last != 0:
     str2 = "and is less than 6 and not 0"
 elif last > 5:
     str2 = "and is greater than 5"
