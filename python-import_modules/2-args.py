@@ -10,6 +10,6 @@ if __name__ == "__main__":
         if n == 2:
             print("1 argument:")
         else:
-            print("{} armguments:".format(n - 1))  # account for filename
+            print("{} arguments:".format(n - 1))  # account for filename
         for i in range(1, n):
             print("{}: {}".format(i, str(argv[i])))
