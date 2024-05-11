@@ -39,7 +39,7 @@ class Square:
     def position(self):
         """Getter for position"""
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """
@@ -69,9 +69,11 @@ class Square:
         """prints the called square using # """
         if self.__size == 0:
             print("")
-        else:
+        for _ in range(self.__position[1]):
+            print("") # prints empty lines up to position 'y'
+        for i in range(self.__size):
+            for x in range(self.__position[0]):
+                print(" ", end="") # prints spaces up to position 'x'
             for i in range(self.__size):
-                for i in range(self.__size):
-                    print("#", end="")  # print "#"
-                print("")  # print new line
-        
+                print("#", end="")  # print "#"
+            print("")  # print new line
