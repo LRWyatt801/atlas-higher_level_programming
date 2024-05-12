@@ -7,7 +7,7 @@ def add_integer(a, b=98):
 
     Args:
         a (int, float): integer to be added
-        b (int, float): integer to be added. Defaults to 98.
+        b (int, float, optional): integer to be added. Defaults to 98.
 
     Raises:
         TypeError: must be int
