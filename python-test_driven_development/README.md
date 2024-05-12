@@ -1,0 +1,1 @@
+This directory will help me learn about test driven development.  How to write tests in the form of ```doctests```
