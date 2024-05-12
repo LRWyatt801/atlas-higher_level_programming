@@ -20,7 +20,7 @@ def matrix_divided(matrix, div):
     Returns:
         matrix: matrix of quotients
     """
-    
+
     # checks for matrix
     first_row_len = len(matrix[0])
     for row in matrix:
@@ -30,9 +30,10 @@ def matrix_divided(matrix, div):
         for element in row:
             # check if all elements in matrix are numbers
             if not isinstance(element, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    
-    #checks for div
+                raise TypeError("matrix must be a matrix (list of lists) "
+                                "of integers/floats")
+
+    # checks for div
     if not isinstance(div, (int, float)):  # check div is int/float
         raise TypeError("div must be a number")
     elif div == 0:  # check division by 0
