@@ -3,9 +3,17 @@
 
 
 def text_indentation(text):
+    """Function that prints new line after '.' ':' and '?'
+
+    Args:
+        text (str): string of text
+
+    Raises:
+        TypeError: wrong type, must be str
+    """
     if not isinstance(text, str):  # check text type is str
         raise TypeError("text must be a string")
-    
+
     c = 0
     while c < len(text) and text[c] == ' ':
         c += 1
