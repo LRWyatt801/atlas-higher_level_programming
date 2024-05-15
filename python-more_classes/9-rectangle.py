@@ -121,7 +121,7 @@ class Rectangle:
             TypeError: type error must be Rectangle
 
         Returns:
-            Rectangle: Whichever rect is larger, if the same then returns rect_1
+            Rectangle: Whichever rect is larger, if same then returns rect_1
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
