@@ -96,7 +96,7 @@ class Rectangle:
             print_rec = ""
             for y in range(self.__height):
                 for x in range(self.__width):
-                    print_rec += self.print_symbol
+                    print_rec += str(self.print_symbol)
                 if y < self.__height - 1:
                     print_rec += "\n"
             return print_rec
