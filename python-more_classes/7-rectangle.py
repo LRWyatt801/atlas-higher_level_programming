@@ -4,10 +4,10 @@
 
 class Rectangle:
     """Class for rectangle
-    
+
     Attributes:
-		number_of_instances (int) = number of current instances
-		print_symbol (any) = symbol to represent rectangle when printed
+        number_of_instances (int) = number of current instances
+        print_symbol (any) = symbol to represent rectangle when printed
     """
     number_of_instances = 0
     print_symbol = '#'
