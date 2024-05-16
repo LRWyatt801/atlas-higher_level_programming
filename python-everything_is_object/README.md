@@ -1,0 +1,1 @@
+This directory is to help me better understand objects
