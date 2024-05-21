@@ -22,4 +22,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """Overwrite __str__ to below"""
-        print(f"[Rectangle] {self.__width}/{self.__height}")
+        print(f"[{self.__class__.__name__}]] {self.__width}/{self.__height}")
