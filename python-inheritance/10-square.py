@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """contains classes for basic shapes"""
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(BaseGeometry):
+class Square(Rectangle):
     """Class for rectangle
 
     Args:
@@ -12,12 +12,5 @@ class Square(BaseGeometry):
     """
     def __init__(self, size) -> None:
         super().integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
-
-    def area(self):
-        """Calculates the area of Rectangle"""
-        return self.__size ** 2
-
-    # def __str__(self):
-    #     """Overwrite __str__ to below"""
-    #     print(f"[Square] {self.__size}/{self.__size}")
