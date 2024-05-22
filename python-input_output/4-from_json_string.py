@@ -14,4 +14,4 @@ def from_json_string(my_str) -> any:
     Returns:
         any: object represented by JSON str
     """
-    return json.load(my_str)
+    return json.loads(my_str)
