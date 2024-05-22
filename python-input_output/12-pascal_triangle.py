@@ -13,7 +13,8 @@ def pascal_triangle(n: int) -> list:
     """
     
     # matrix to store generated values
-    triangle = [[]]
+    triangle = [[0 for x in range(y)]
+                for y in range(n)]
     
     # iterate through every line
     for line in range(0, n):
