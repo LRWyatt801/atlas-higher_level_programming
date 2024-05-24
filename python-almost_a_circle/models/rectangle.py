@@ -136,3 +136,8 @@ class Rectangle(Base):
                 for prt_width in range(self.__width):
                     print(f"{self.print_symbol}", end="")
                 print("")
+
+    def __str__(self):
+        """overwrite __str__ to below"""
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
+            .format(self.id, self.__x, self.__y, self.__width, self.__height)
