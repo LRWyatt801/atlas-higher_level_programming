@@ -12,9 +12,9 @@ class Rectangle(Base):
     Args:
         Base (class): Parent class
     """
-    
+
     print_symbol = '#'
-    
+
     def __init__(self, width: int, height: int,
                  x: int = 0, y: int = 0, id: int = None) -> None:
         super().__init__(id)
@@ -132,7 +132,7 @@ class Rectangle(Base):
                 print("")  # prints empty lines up to coordinate y
             for prt_height in range(self.__height):
                 for _ in range(self.__x):
-                    print(" ", end="")  # prints spaces to shift to coordinate x
+                    print(" ", end="")  # prints spaces to shift to x coor
                 for prt_width in range(self.__width):
                     print(f"{self.print_symbol}", end="")
                 print("")
