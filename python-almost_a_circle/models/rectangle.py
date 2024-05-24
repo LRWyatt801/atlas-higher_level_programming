@@ -12,6 +12,9 @@ class Rectangle(Base):
     Args:
         Base (class): Parent class
     """
+    
+    print_symbol = '#'
+    
     def __init__(self, width: int, height: int,
                  x: int = 0, y: int = 0, id: int = None) -> None:
         super().__init__(id)
@@ -119,3 +122,17 @@ class Rectangle(Base):
             int: area
         """
         return self.__height * self.__width
+
+    def display(self):
+        """print the retangle using print_symbol"""
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        else:
+            for _ in range(self.__y):
+                print("")  # prints empty lines up to coordinate y
+            for prt_height in range(self.__height):
+                for _ in range(self.__x):
+                    print(" ", end="")  # prints spaces to shift to coordinate x
+                for prt_width in range(self.__width):
+                    print(f"{self.print_symbol}", end="")
+                print("")
