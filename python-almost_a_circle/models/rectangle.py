@@ -139,8 +139,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """overwrite __str__ to below"""
-        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
-            .format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[{}] ({:d}) {:d}/{:d} - {:d}/{:d}"\
+            .format(self.__class__, self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs) -> None:
         """Update rectangle object
