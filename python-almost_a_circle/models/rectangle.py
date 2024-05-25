@@ -137,11 +137,6 @@ class Rectangle(Base):
                     print(f"{self.print_symbol}", end="")
                 print("")
 
-    def __str__(self):
-        """overwrite __str__ to below"""
-        return "[{}] ({:d}) {:d}/{:d} - {:d}/{:d}"\
-            .format(self.__class__.__name__, self.id, self.__x, self.__y, self.__width, self.__height)
-
     def update(self, *args, **kwargs) -> None:
         """Update rectangle object
 
@@ -164,3 +159,18 @@ class Rectangle(Base):
             self.y = args[4]
         except IndexError:
             pass
+
+    def __str__(self):
+        """overwrite __str__ to below"""
+        return "[{}] ({:d}) {:d}/{:d} - {:d}/{:d}"\
+            .format(self.__class__.__name__, self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def to_dictionary(self) -> dict:
+        recdict = {
+            'id': self.id,
+            'width': self.__width,
+            'height': self.__height,
+            'x': self.__x,
+            'y': self.__y
+        }
+        return recdict
