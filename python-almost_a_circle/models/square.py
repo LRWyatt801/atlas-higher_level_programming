@@ -12,7 +12,7 @@ class Square(Rectangle):
     Args:
         Rectangle (Class): Provides neccessary info for a rectangle
     """
-    def __init__(self, size: int, x: int = 0, y: int = 0, id: int = None) -> None:
+    def __init__(self, size: int, x: int = 0, y: int = 0, id: int = None):
         """Create a new instance of Square
 
         Args:
@@ -22,19 +22,18 @@ class Square(Rectangle):
             id (int, optional): Instance ID. Defaults to None.
         """
         super().__init__(size, size, x, y, id)
-   
+
     @property
     def size(self):
         """Size Getter"""
         return self.width
-    
+
     @size.setter
     def size(self, value: int):
         """Size Setter"""
         self.width = value
         self.height = value
-        
-   
+
     def __str__(self):
         """String representation of Square"""
         return "[{}] ({:d}) {:d}/{:d} - {:d}".format(
