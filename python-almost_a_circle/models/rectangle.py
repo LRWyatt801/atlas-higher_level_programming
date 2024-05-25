@@ -163,7 +163,8 @@ class Rectangle(Base):
     def __str__(self):
         """overwrite __str__ to below"""
         return "[{}] ({:d}) {:d}/{:d} - {:d}/{:d}"\
-            .format(self.__class__.__name__, self.id, self.__x, self.__y, self.__width, self.__height)
+            .format(self.__class__.__name__, self.id,
+                    self.__x, self.__y, self.__width, self.__height)
 
     def to_dictionary(self) -> dict:
         """Creates and returns the dictionary representation of a Rectangle
