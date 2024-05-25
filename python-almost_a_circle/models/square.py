@@ -14,3 +14,8 @@ class Square(Rectangle):
     """
     def __init__(self, size: int, x: int = 0, y: int = 0, id: int = None) -> None:
         super().__init__(size, size, x, y, id)
+    
+    def __str__(self):
+        """overwrite __str__ to below"""
+        return "[{}] ({:d}) {:d}/{:d} - {:d}"\
+            .format(self.__class__.__name__, self.id, self.__x, self.__y, self.__width)
