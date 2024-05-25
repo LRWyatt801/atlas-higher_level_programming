@@ -166,6 +166,11 @@ class Rectangle(Base):
             .format(self.__class__.__name__, self.id, self.__x, self.__y, self.__width, self.__height)
 
     def to_dictionary(self) -> dict:
+        """Creates and returns the dictionary representation of a Rectangle
+
+        Returns:
+            dict: Dictionary representation
+        """
         recdict = {
             'id': self.id,
             'width': self.__width,
