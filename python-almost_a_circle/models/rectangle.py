@@ -142,7 +142,7 @@ class Rectangle(Base):
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args) -> None:
+    def update(self, *args, **kwargs) -> None:
         """Update rectangle object
 
         Optional Args:
@@ -152,6 +152,10 @@ class Rectangle(Base):
             x (int): x coordinate of rectangle
             y (int): y coordinate of rectangle
         """
+        if len(args) == 0:
+            for key, value in kwargs.items():
+                self.__setattr__(key, value)
+            return
         try:
             self.id = args[0]
             self.width = args[1]
