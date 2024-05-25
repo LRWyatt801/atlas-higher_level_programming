@@ -141,3 +141,22 @@ class Rectangle(Base):
         """overwrite __str__ to below"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args) -> None:
+        """Update rectangle object
+
+        Optional Args:
+            id (int): id of object
+            width (int): width of rectangle object
+            height (int): height of rectangle object
+            x (int): x coordinate of rectangle
+            y (int): y coordinate of rectangle
+        """
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
