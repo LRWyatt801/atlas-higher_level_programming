@@ -53,7 +53,7 @@ class Base:
         else:
             with open(filename, 'w') as file:
                 file.write(cls.to_json_string(json_list))
-    
+
     @staticmethod
     def from_json_string(json_string: str) -> list:
         """Returns the list of the JSON representation of json_string
@@ -64,4 +64,7 @@ class Base:
         Returns:
             list: List of the JSON string representation
         """
-        return json.loads(json_string)
+        if json_string is not None:
+            return json.loads(json_string)
+        else:
+            return []
