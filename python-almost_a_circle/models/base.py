@@ -3,6 +3,7 @@
 
 
 import json
+import os
 
 
 class Base:
@@ -83,3 +84,17 @@ class Base:
 
         tmp.update(**dictionary)
         return tmp
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + ".json"
+        list_instances = []
+        list_dictionaries = []
+
+        if os.path.exists(filename):
+            with open(filename, 'r') as file:
+                json_str = file.read()
+                list_dictionaries = cls.from_json_string(json_str)
+                for dict in list_dictionaries:
+                    list_instances.append(cls.create(**dict))
+        return list_instances
