@@ -1,0 +1,1 @@
+This directory is to help me learn more about MySQL and how to make queries.
