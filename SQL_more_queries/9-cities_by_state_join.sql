@@ -1,5 +1,7 @@
 -- Lists all cities contained in database
 
-SELECT cities.id, cities.name, states.name
+SELECT id, name, (
+	SELECT name FROM states WHERE id = cities.state_id
+)
 FROM cities
 ORDER BY cities.id ASC;
