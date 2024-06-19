@@ -6,13 +6,12 @@ import sys
 
 
 def list_cities(username, passwd, database):
-    """Filters database and displays state
+    """Filters database and displays cities with states
 
     Args:
         username (str): Username of user
         passwd (str): password for user
         database (str): name of database
-        state (str): State to search for
     """
     # connect to database
     db = MySQLdb.connect(
