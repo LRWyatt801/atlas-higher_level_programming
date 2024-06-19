@@ -14,7 +14,7 @@ def state_filter(username, passwd, database, state):
         database (str): name of database
         state (str): State to search for
     """
-     # connect to database
+    # connect to database
     db = MySQLdb.connect(
         host='localhost',
         port=3306,
@@ -27,8 +27,8 @@ def state_filter(username, passwd, database, state):
     cur = db.cursor()
 
     # Execute query
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id"
-                .format(state))
+    cur.execute("SELECT * FROM states WHERE " +
+                "name = '{}' ORDER BY id".format(state))
     rows = cur.fetchall()
     for row in rows:
         print(row)
