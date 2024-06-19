@@ -32,7 +32,7 @@ def state_filter(username, passwd, database, state):
              + "WHERE states.name = %s"
              + "ORDER BY cities.id")
     cur.execute(query, (state,))
-    
+
     rows = cur.fetchall()
     only = True
     for row in rows:
