@@ -27,7 +27,7 @@ def state_filter(username, passwd, database, state):
     cur = db.cursor()
 
     # Execute query
-    cur.execute("SELECT * FROM states WHERE BINARY" +
+    cur.execute("SELECT * FROM states WHERE BINARY " +
                 "name = '{}' ORDER BY id".format(state))
     rows = cur.fetchall()
     for row in rows:
