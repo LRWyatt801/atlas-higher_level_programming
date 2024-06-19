@@ -27,7 +27,7 @@ def list_cities(username, passwd, database):
     cur = db.cursor()
 
     # Execute query
-    cur.execute("SELECT cities.id, cities.name, states.name FROM cities "
+    cur.execute("SELECT cities.id, cities.name, states.name FROM states "
         + "INNER JOIN cities ON cities.state_id = states.id "
         + "ORDER BY cities.id")
 
