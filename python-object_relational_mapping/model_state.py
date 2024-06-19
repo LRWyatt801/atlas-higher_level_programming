@@ -10,5 +10,5 @@ Base = declarative_base()
 class State(Base):
     """This class connects to a SQL table"""
     __tablename__ = 'states'
-    id = Column(primary_key=True, autoincrement=True, nullable=False)
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
