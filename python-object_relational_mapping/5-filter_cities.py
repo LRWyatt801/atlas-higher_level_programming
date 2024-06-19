@@ -34,12 +34,14 @@ def state_filter(username, passwd, database, state):
     cur.execute(query, (state,))
     
     rows = cur.fetchall()
+    only = True
     for row in rows:
-        print(row, end="")
-        if rows[row + 1]:
-            print(", ", end="")
+        if only:
+            print(row[0], end="")
+            only = False
         else:
-            print()
+            print(", " + row[0], end="")
+    print()
 
     cur.close()
     db.close()
