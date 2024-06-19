@@ -18,7 +18,7 @@ def list_states(username, passwd, database):
 
     # Create engine and connect to database
     engine = create_engine(
-        f'mysql+mysldb://{username}:{passwd}@localhost:3306/{database}'
+        f'mysql+mysqldb://{username}:{passwd}@localhost:3306/{database}'
     )
 
     # Set up all data to use
