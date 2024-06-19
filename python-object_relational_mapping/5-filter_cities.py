@@ -27,8 +27,8 @@ def state_filter(username, passwd, database, state):
     cur = db.cursor()
 
     # Execute query
-    query = ("SELECT cities.name FROM cities "
-             + "JOIN states ON cities.state_id = states.id "
+    query = ("SELECT cities.name FROM states "
+             + "JOIN cities ON cities.state_id = states.id "
              + "WHERE states.name = %s"
              + "ORDER BY cities.id")
     cur.execute(query, (state,))
