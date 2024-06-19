@@ -28,7 +28,7 @@ def state_filter(username, passwd, database, state):
 
     # Execute query
     query = "SELECT * FROM states WHERE name = %s ORDER BY id" 
-    cur.execute(query, (state))
+    cur.execute(query, (state,))
     rows = cur.fetchall()
     for row in rows:
         print(row)
