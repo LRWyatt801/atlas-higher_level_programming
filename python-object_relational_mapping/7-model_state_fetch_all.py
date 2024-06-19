@@ -3,7 +3,7 @@
 
 import sys
 from model_state import Base, State
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
@@ -22,7 +22,7 @@ def list_states(username, passwd, database):
     )
 
     # Set up all data to use
-    Base.metadata.create_all(engine)
+    Base.metadata.create_all(bind=engine)
 
     # Create session
     Session = sessionmaker(bind=engine)
