@@ -32,9 +32,14 @@ def state_filter(username, passwd, database, state):
              + "WHERE states.name = %s"
              + "ORDER BY cities.id")
     cur.execute(query, (state,))
+    
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        print(row, end="")
+        if rows[row + 1]:
+            print(", ", end="")
+        else:
+            print()
 
     cur.close()
     db.close()
