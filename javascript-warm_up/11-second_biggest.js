@@ -6,5 +6,10 @@ if (process.argv.length <= 2) {
   const numbers = process.argv.slice(2).map(arg => parseInt(arg));
   // sort the array in descending order
   numbers.sort((a, b) => b - a);
-  console.log(numbers[1]);
+
+  if (numbers.length >= 2) {
+    console.log(numbers[1]);
+  } else {
+    console.log(0);
+  }
 }
