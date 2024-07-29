@@ -3,7 +3,7 @@ const request = require('request');
 const fs = require('fs');
 
 if (process.argv.length <= 2) {
-  console.error('Usage: <api url> <movie id>');
+  console.error('Usage: <api url> <file name>');
 }
 
 const url = process.argv[2];
